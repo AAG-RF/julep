@@ -42,7 +42,7 @@ def _recursive_evaluate(expr, evaluator: SimpleEval, eval_prompt_prefix: str = "
         try:
             result = expr
             if expr.startswith(eval_prompt_prefix):
-                result = evaluator.eval(expr[len(eval_prompt_prefix):].strip())
+                result = evaluator.eval(expr[len(eval_prompt_prefix) :].strip())
 
             return result
         except Exception as e:
