@@ -37,7 +37,7 @@ class EvaluateError(Exception):
 
 
 # Recursive evaluation helper function
-def _recursive_evaluate(expr, evaluator: SimpleEval, eval_prompt_prefix: str = "$"):
+def _recursive_evaluate(expr, evaluator: SimpleEval, eval_prompt_prefix: str = "$ "):
     if isinstance(expr, str):
         try:
             result = expr
